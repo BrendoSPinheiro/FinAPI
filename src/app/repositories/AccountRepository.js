@@ -3,6 +3,14 @@ const { v4: uuidv4 } = require('uuid');
 const customers = [];
 
 class AccountRepository{
+  findByCpf(cpf) {
+    const customerExists = customers.find(
+      (customer) => customer.cpf === cpf
+    );
+
+    return customerExists;
+  }
+
   createCustomers({ name, cpf, birthDate }) {
     const newCustomer = {
       id: uuidv4(),

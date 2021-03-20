@@ -1,6 +1,6 @@
 class AccountController {
   store(request, response) {
-    console.log('Estou no store');
+    
   }
 }
 
